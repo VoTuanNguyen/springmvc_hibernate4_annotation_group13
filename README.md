@@ -1,0 +1,1 @@
+# springmvc_hibernate4_annotation_group13
