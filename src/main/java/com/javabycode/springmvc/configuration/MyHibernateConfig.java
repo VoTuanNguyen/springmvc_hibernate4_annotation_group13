@@ -38,7 +38,7 @@ public class MyHibernateConfig {
     public DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName(environment.getRequiredProperty("jdbc.driverClassName"));
-        dataSource.setUrl(environment.getRequiredProperty(String.format("jdbc.url","hibernate","app-hibernate4-annotation:asia-northeast1:hibernate")));
+        dataSource.setUrl(String.format(environment.getRequiredProperty("jdbc.url"),"hibernate","app-hibernate4-annotation:asia-northeast1:hibernate"));
         dataSource.setUsername(environment.getRequiredProperty("jdbc.username"));
         dataSource.setPassword(environment.getRequiredProperty("jdbc.password"));
         return dataSource;
